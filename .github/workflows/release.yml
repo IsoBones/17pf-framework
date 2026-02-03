@@ -1,0 +1,26 @@
+name: Build Release Zip
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create zip
+        run: |
+          # Zip everything inside 17thMissionFramework/, excluding repo-level stuff
+          zip -r 17thMissionFramework.zip \
+            description.ext \
+            initServer.sqf \
+            initPlayerLocal.sqf \
+            PathfinderFramework/
+
+      - name: Attach to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: 17thMissionFramework.zip
