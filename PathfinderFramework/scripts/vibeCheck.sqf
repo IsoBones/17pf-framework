@@ -13,10 +13,8 @@ private _blacklistedMods = [
 	["HZ_enemy_tagging","Enemy Tagging System"],
 	["WBK_TwoWeaponsOnBack","WebKnight's Two Primary Weapons"],
 	["PLP_MapTools","Simple MapTools"],
-	["",""],
-	["",""],
-	["",""],
-	["",""]
+// 	---	Add more below like this ---
+//	["CfgPatchesClassname","Mod Display Name"],
 ];
 
 // Scan and collect any offending mods
