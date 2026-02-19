@@ -31,7 +31,7 @@ if (isNil "briefingPhase" || briefingPhase == false) exitWith {};
 		private _briefTime = (_timeSinceBriefingStart / 60) toFixed 0;
 		private _gameHour = floor daytime;
 		private _gameMinute = floor ((daytime - _gameHour) * 60);
-		private _gameTime = format ["%1:%2", _gameHour, _gameMinute];
+		private _gameTime = format ["%1:%2", _gameHour, [_gameMinute, 2] call BIS_fnc_leadingZeros];
 
 
 		switch (_radioSetting) do {
@@ -81,7 +81,7 @@ Welcome, <t color='#FFFF9400'>%2</t>, to %3.<br/><br/>
 
 Your Squad Leader is <t color='#FFFF9400'>%6</t>, listen to their instructions.<br/><br/>
 
-<t font='PuristaBold'>Squad Callsign:
+<t font='PuristaBold'><t align='left'>Squad Callsign:</t>
 <t color='#FFFF9400'><t align='right'>%7 </t></t><br/>
 <t align='left'>Your Role:</t>
 <t color='#FFFF9400'><t align='right'>%8 </t></t><br/>
