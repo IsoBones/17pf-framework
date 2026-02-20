@@ -14,7 +14,7 @@ if (isNil "briefingPhase" || briefingPhase == false) exitWith {};
 	/////////////////////////////////////
 	_radioFreq = "Not Set"; // Debug value
 	_initialRole = (roleDescription player) splitString "@" select 0;
-	player setVariable ["loadoutRole", _initialRole];
+	player setVariable ["loadoutRole", _initialRole, true];
 	while {briefingPhase} do {
 		// recalc every 5 seconds to adjust for updates/changes 
 		private _playerName = name player;
