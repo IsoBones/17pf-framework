@@ -32,7 +32,8 @@ if (isNil "briefingPhase" || briefingPhase == false) exitWith {};
 		private _briefTime = (_timeSinceBriefingStart / 60) toFixed 0;
 		private _gameHour = floor daytime;
 		private _gameMinute = floor ((daytime - _gameHour) * 60);
-		private _gameTime = format ["%1:%2", _gameHour, [_gameMinute, 2] call BIS_fnc_leadingZeros];
+		private _minPadded = if (_gameMinute < 10) then {"0" + str _gameMinute} else {str _gameMinute};
+		private _gameTime = format ["%1:%2", _gameHour, _minPadded];
 
 
 		switch (_radioSetting) do {
