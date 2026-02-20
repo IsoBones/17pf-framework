@@ -91,7 +91,7 @@ Your Squad Leader is <t color='#FFFF9400'>%6</t>, listen to their instructions.<
 <t align='right'><t color='#FFFF9400'>Ch: %9 </t></t><br/>
 </t><br/><br/>
 
-<t font='PuristaLight'><t size='0.7'>Mission Framework V0.4 - 01/07/2025</t></t><br/>
+<t font='PuristaLight'><t size='0.7'>Mission Framework V1.0 - 20/02/2026</t></t><br/>
 <t font='PuristaLight'><t size='0.6'>Original shared with the 17th Pathfinders by Jace at B|Tac!</t></t>
 ";
 
