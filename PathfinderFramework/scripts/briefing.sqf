@@ -50,8 +50,12 @@ _unitsArr = call CBA_fnc_players;
 		// 	default{ _strRank = "Pvt. "; };
 		// };
 
-		_strRole = " - " + (roleDescription _x);
-		_strRole = _strRole splitString "@" select 0;
+		private _roleVar = _x getVariable "loadoutRole";
+		if (isNil "_roleVar") then {
+			_strRole = " - " + ((roleDescription _x) splitString "@" select 0);
+		} else {
+			_strRole = " - " + _roleVar;
+		};
 
         if(_newGrp != _oldGrp) then {
             _strGrp = "<br/>" + (groupID(group _x)) + "<br/>";
