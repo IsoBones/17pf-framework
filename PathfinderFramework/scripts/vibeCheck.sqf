@@ -12,7 +12,7 @@ private _blacklistedMods = [
 	["Revo_NoWeaponSway","No Weapon Sway"],
 	["HZ_enemy_tagging","Enemy Tagging System"],
 	["WBK_TwoWeaponsOnBack","WebKnight's Two Primary Weapons"],
-	["PLP_MapTools","Simple MapTools"],
+	["PLP_MapTools","Simple MapTools"]
 // 	---	Add more below like this ---
 //	["CfgPatchesClassname","Mod Display Name"],
 ];
